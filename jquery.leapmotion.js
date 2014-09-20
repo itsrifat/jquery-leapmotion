@@ -9,7 +9,8 @@ $.extend({
         var is_focus = true;
         var defaults = {
             element: window,
-            cursorSpeed: 1.5
+            cursorSpeed: 1.5,
+            minGrabStrengthForLike:0.9
         };
         var options = $.extend(defaults, config);
 
@@ -83,6 +84,24 @@ $.extend({
                         );
                     });
                 }
+                //like gesture detection
+                //if the direction of the thumb is upward(with a slight tilt)
+                if (frame.hands.length){
+                  if(frame.hands[0].grabStrength > options.minGrabStrengthForLike
+                      && frame.hands[0].thumb.direction[1] > 0.5
+                      && frame.hands[0].thumb.direction[1] < 0.9){
+                    $(options.element).trigger('like', frame);
+                  }
+                  //dislike gesture detection
+                  //if the direction of the thumb is downward(with a slight tilt)
+                  else if(frame.hands[0].grabStrength > options.minGrabStrengthForLike
+                    && frame.hands[0].thumb.direction[1] < -0.6
+                    && frame.hands[0].thumb.direction[1] > -0.9){
+                    $(options.element).trigger('dislike', frame);
+                  }
+
+                }
+
             }
         });
 
