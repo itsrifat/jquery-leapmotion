@@ -35,12 +35,12 @@ $.extend({
             $(options.element).trigger('connect');
         });
 
-        controller.on('deviceConnected', function(){
-            $(options.element).trigger('deviceConnected');
+        controller.on('streamingStarted', function(){
+            $(options.element).trigger('streamingStarted');
         });
 
-        controller.on('deviceDisconnected', function(){
-            $(options.element).trigger('deviceDisconnected');
+        controller.on('streamingStopped', function(){
+            $(options.element).trigger('streamingStopped');
         });
 
         controller.on('focus', function(){

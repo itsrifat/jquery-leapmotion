@@ -4,12 +4,12 @@ jquery-leapmotion is a simple jQuery plugin that allows you to add custom event 
 
 ## Setup
 
-Include the jQuery library (version 1.8.3 or newer), leapjs (version 0.2.0) and jquery-leapmotion plugin files in your webpage (preferably at the bottom of the page, before the closing BODY tag):
+Include the jQuery library (version 1.8.3 or newer), leapjs (version 0.6.0) and jquery-leapmotion plugin files in your webpage (preferably at the bottom of the page, before the closing BODY tag):
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="//js.leapmotion.com/0.2.0/leap.min.js"></script>
-<script src="//jqueryleapmotion.s3.amazonaws.com/jquery.leapmotion.min.js"></script>
+<script src="//js.leapmotion.com/0.6.0/leap.min.js"></script>
+<script src="//raw.githubusercontent.com/itsrifat/jquery-leapmotion/master/jquery.leapmotion.min.js"></script>
 ```
 
 ## Events
