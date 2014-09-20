@@ -88,8 +88,8 @@ $.extend({
                 //if the direction of the thumb is upward(with a slight tilt)
                 if (frame.hands.length){
                   if(frame.hands[0].grabStrength > options.minGrabStrengthForLike
-                      && frame.hands[0].thumb.direction[1] > 0.5
-                      && frame.hands[0].thumb.direction[1] < 0.9){
+                      && frame.hands[0].thumb.direction[1] > 0.4
+                      ){
                     $(options.element).trigger('like', frame);
                   }
                   //dislike gesture detection
